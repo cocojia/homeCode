@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件冒泡</title>
+</head>
+<body>
+	<div id="parent">
+		送达方式方法
+	　　<div id="child" class="child">的点点滴滴多多多多多多</div>
+	</div>
+	<ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+    </ul>
+</body>
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	// document.getElementById("parent").addEventListener("click",function(e){
+ //                alert("parent事件被触发，"+this.id);
+ //            },true);
+ //    document.getElementById("child").addEventListener("click",function(e){
+ //        alert("child事件被触发，"+this.id)
+ //    },true);
+ $("ul").on("mouseover",function(e){
+                $(e.target).css("background-color","#ddd").siblings().css("background-color","white");
+            });
+ // $("li").on("mouseover",function(){
+ //                $(this).css("background-color","#ddd").siblings().css("background-color","white");
+ //            });
+ $("<li>item7</li>").appendTo("ul");
+</script>
+</html>
