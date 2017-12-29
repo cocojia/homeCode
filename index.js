@@ -1,5 +1,4 @@
 <script>
-
 /*============================用rem做响应式布局时，js控制fontsize============================*/
 (function (doc, win) {
     var docEl = doc.documentElement,
