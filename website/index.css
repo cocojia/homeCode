@@ -1,0 +1,280 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td,img,a img{margin:0;padding:0}
+body{font-size:12px;color:#666;font-family:Verdana,Microsoft YaHei,Simsun;
+    background:#f9f9f9;line-height:24px;overflow:hidden}
+fieldset,img,a img{border:0}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+em{font-style:normal}
+input,button,select,textarea{outline:0}
+textarea{resize:none}
+p{text-align:justify;text-justify:distribute}
+a{color:#666;text-decoration:none}
+a:hover{color:#f60;text-decoration:none}
+.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-table}
+*html .clearfix{height:1%}
+.clearfix{display:block}
+*+html .clearfix{min-height:1%}
+.myWheel{width:100%;transition:all 1s}
+.myWheel .page{width:100%;height:100%;margin:0 auto}
+.yuanDian{position:fixed;right:10px;top:50%;margin:-50px 0 0 0}
+.yuanDian li{width:15px;height:15px;background:url(img/lunBoyuan.png) no-repeat -15px 0;
+            margin:0 0 10px 0;cursor:pointer}
+.yuanDian .ydCur{background-position:0 0}
+.header{width:100%;height:80px;background:url(img/header_bg.jpg) repeat;position:fixed;
+    z-index:10000}
+.fixedHead{position:fixed;top:0;left:0;z-index:9999}
+.headerIn{width:980px;margin:0 auto}
+.loGo{width:80px;height:80px;float:left}
+.headerText{
+    width:234px;
+    height: 70px;
+    padding:0 20px;
+    float:left;
+    cursor:default;
+    position:relative;
+    overflow:hidden;
+    }
+.headerText ul{width:234px;height:120px;position:absolute;left:0;top:0;
+    -webkit-animation:gogogo 4s infinite;
+    -moz-animation:gogogo 4s infinite;
+    -ms-animation:gogogo 4s infinite;
+    -o-animation:gogogo 4s infinite;
+    animation:gogogo 4s infinite}
+@-webkit-keyframes gogogo{
+    0%{top:0;left:20px}
+    50%{top:-80px;left:20px}
+    100%{top:-160px;left:20px}}
+@-o-keyframes gogogo{
+    0%{top:0;left:20px}
+    50%{top:-80px;left:20px}
+    100%{top:-160px;left:20px}}
+@-ms-keyframes gogogo{
+    0%{top:0;left:20px}
+    50%{top:-80px;left:20px}
+    100%{top:-160px;left:20px}}
+@-moz-keyframes gogogo{
+    0%{top:0;left:20px}
+    50%{top:-80px;left:20px}
+    100%{top:-160px;left:20px} }
+@keyframes gogogo{
+    0%{top:0;left:30px}
+    50%{top:-80px;left:30px}
+    100%{top:-160px;left:30px}}
+.headerText ul li{display:block;height:80px;line-height:80px;color:#fff;text-align:center}
+.nav{width:400px;height:80px;padding:0 25px;float:left;overflow:hidden}
+.nav li{
+    float:left;
+    width:100px;
+    height:80px;
+    line-height:80px;
+    text-align:center;
+    cursor:pointer;
+    transition:all .5s;   /*0.5s完成过渡*/
+    }
+.nav li:hover{transform:translate(0px,-80px)}
+.nav li a{display:block;font-size:16px;color:#fff}
+.nav li a:nth-of-type(2){color:#f4c21f}
+.contact{width:170px;height:30px;padding:25px 3px;float:right}
+.contact li{
+    float:left;
+    width:0;
+    height:30px;
+    padding-left:35px;
+    line-height:32px;
+    font-size:12px;
+    overflow:hidden;
+    text-align:center;
+    color:#000;
+    border-radius:50px;
+    -webkit-transition:all .5s ease-in-out 0s;
+    -moz-transition:all .5s ease-in-out 0s;
+    -ms-transition:all .5s ease-in-out 0s;
+    -o-transition:all .5s ease-in-out 0s;
+    transition:all .5s ease-in-out 0s;
+    }
+.contact li:hover{width:95px}
+.contact li:nth-child(1){background:url(img/tel-ico1.png)no-repeat}
+.contact li:nth-child(1):hover{background:#eee url(img/tel-ico1.png) no-repeat}
+.contact li:nth-child(2){background:url(img/tel-ico2.png) no-repeat}
+.contact li:nth-child(2):hover{background:#eee url(img/tel-ico2.png) no-repeat}
+.banner{width:100%;height:100%;position:relative;overflow:hidden}
+.banner ul li{width:100%;height:100%}
+.banner ul li a{width:100%;height:642px;margin:10px 0 0 0;display:block}
+.banner ul .img00{background:#0f225c url(img/banner01.jpg) no-repeat center top}
+.banner ul .img01{background:#480049 url(img/banner02.jpg) no-repeat center top}
+.banner ul .img02{background:url(img/banner03.jpg) no-repeat center top,linear-gradient(180deg,#3bbfd6 0,#40c2cf 20%,#4cc7c2 50%,#59cfac 80%,#6fd79a 100%)}
+.banner ul .img03{background:#182b49 url(img/banner04.jpg) no-repeat center top}
+.banner ul .img04{background:#c1c1c1 url(img/banner05.jpg) no-repeat center top}
+.banner ol{width:125px;position:absolute;left:50%;margin:0 0 0 -62px;bottom:10px}
+.banner ol li{width:15px;height:15px;float:left;background:url(img/lunBoyuan.png) no-repeat -15px 0;
+    margin:0 5px;cursor:pointer}
+.banner ol .current{background-position:0 0}
+.bannerBox{width:900px;height:350px;margin:50px auto;position:relative;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d}
+.te{width: 100%;height: 105px;
+    line-height: 116px;
+    padding: 80px 0 0 0;
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;}
+.works_banner{background: url(img/skill_bg.jpg) no-repeat center}
+.bannerBox ul{height:350px}
+.bannerBox ul li{position:absolute;width:180px;height:350px;
+    -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    -moz-transition:all 1s ease 0s;
+    -ms-transition:all 1s ease 0s;
+    -o-transition:all 1s ease 0s;
+    -webkit-transition:all 1s ease 0s;
+    transition:all 1s ease 0s}
+.bannerBox ul li.no1{top:0;left:0}
+.bannerBox ul li.no2{top:0;left:180px;
+    -moz-transition:all 1s ease .4s;
+    -ms-transition:all 1s ease .4s;
+    -o-transition:all 1s ease .4s;
+    -webkit-transition:all 1s ease .4s;
+    transition:all 1s ease .4s}
+.bannerBox ul li.no3{top:0;left:360px;
+    -moz-transition:all 1s ease .6s;
+    -ms-transition:all 1s ease .6s;
+    -o-transition:all 1s ease .6s;
+    -webkit-transition:all 1s ease .6s;
+    transition:all 1s ease .6s}
+.bannerBox ul li.no4{top:0;left:540px;
+    -moz-transition:all 1s ease .8s;
+    -ms-transition:all 1s ease .8s;
+    -o-transition:all 1s ease .8s;
+    -webkit-transition:all 1s ease .8s;
+    transition:all 1s ease .8s}
+.bannerBox ul li.no5{top:0;left:720px;
+    -moz-transition:all 1s ease 1s;
+    -ms-transition:all 1s ease 1s;
+    -o-transition:all 1s ease 1s;
+    -webkit-transition:all 1s ease 1s;
+    transition:all 1s ease 1s}
+.bannerBox ul li .mianA{position:absolute;top:0;left:0;width:180px;height:350px;background:url(img/ban01.png);
+    z-index:2;
+    -moz-transform:translateZ(150px);
+    -ms-transform:translateZ(150px);
+    -o-transform:translateZ(150px);
+    -webkit-transform:translateZ(150px);
+    transform:translateZ(150px);
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden}
+.bannerBox ul li .mianB{position:absolute;top:0;left:0;width:180px;height:350px;background:url(img/ban02.png);
+    -moz-transform:rotateX(90deg) translateZ(150px);
+    -ms-transform:rotateX(90deg) translateZ(150px);
+    -o-transform:rotateX(90deg) translateZ(150px);
+    -webkit-transform:rotateX(90deg) translateZ(150px);
+    transform:rotateX(90deg) translateZ(150px);
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    webkit-backface-visibility:hidden;
+    backface-visibility:hidden}
+.bannerBox ul li .mianC{position:absolute;top:0;left:0;width:180px;height:350px;background:url(img/ban03.png);
+    -moz-transform:rotateX(180deg) translateZ(150px);
+    -ms-transform:rotateX(180deg) translateZ(150px);
+    -o-transform:rotateX(180deg) translateZ(150px);
+    -webkit-transform:rotateX(180deg) translateZ(150px);
+    transform:rotateX(180deg) translateZ(150px);
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden}
+.bannerBox ul li .mianD{position:absolute;top:0;left:0;width:180px;height:350px;background:url(img/ban04.png);
+    -moz-transform:rotateX(-90deg) translateZ(150px);
+    -ms-transform:rotateX(-90deg) translateZ(150px);
+    -o-transform:rotateX(-90deg) translateZ(150px);
+    -webkit-transform:rotateX(-90deg) translateZ(150px);
+    transform:rotateX(-90deg) translateZ(150px);
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden}
+.bannerBox ul li:nth-child(2) .mianA{background-position:-180px 0}
+.bannerBox ul li:nth-child(3) .mianA{background-position:-360px 0}
+.bannerBox ul li:nth-child(4) .mianA{background-position:-540px 0}
+.bannerBox ul li:nth-child(5) .mianA{background-position:-720px 0}
+.bannerBox ul li:nth-child(2) .mianB{background-position:-180px 0}
+.bannerBox ul li:nth-child(3) .mianB{background-position:-360px 0}
+.bannerBox ul li:nth-child(4) .mianB{background-position:-540px 0}
+.bannerBox ul li:nth-child(5) .mianB{background-position:-720px 0}
+.bannerBox ul li:nth-child(2) .mianC{background-position:-180px 0}
+.bannerBox ul li:nth-child(3) .mianC{background-position:-360px 0}
+.bannerBox ul li:nth-child(4) .mianC{background-position:-540px 0}
+.bannerBox ul li:nth-child(5) .mianC{background-position:-720px 0}
+.bannerBox ul li:nth-child(2) .mianD{background-position:-180px 0}
+.bannerBox ul li:nth-child(3) .mianD{background-position:-360px 0}
+.bannerBox ul li:nth-child(4) .mianD{background-position:-540px 0}
+.bannerBox ul li:nth-child(5) .mianD{background-position:-720px 0}
+.works_vi{background:#f0f0f0;position:relative}
+.viBox{width:1200px;height:424px;border:1px solid #000;margin:0px auto;position:relative;overflow:hidden}
+.tt{width: 100%;height: 105px;
+    line-height: 116px;
+    padding: 80px 0 0 0;
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;}
+.viBox ul{overflow:hidden;width:8400px;position:absolute}
+.viBox ul li{float:left;width:599px;height:424px;border-left:1px solid #fff}
+.works_vi{background: url(img/contact_bg.jpg) no-repeat center}
+.works_vi a{display:block;width:45px;height:45px;position:absolute;top:350px}
+.works_vi .vileftBtn{background:url(img/zuoanniu.png) no-repeat;left:80px}
+.works_vi .virightBtn{background:url(img/youanniu.png) no-repeat;right:80px}
+.webBox{width:1220px;height:446px;margin:20px auto}
+.tr{width: 100%;height: 105px;
+    line-height: 116px;
+    padding: 80px 0 0 0;
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;}
+.works_web{background: url(img/skill_bg.jpg) no-repeat center}
+.webBox ul{overflow:hidden}
+.webBox ul li{float:left;margin:0 10px 10px 0}
+.webBox ul li a,.webBox ul li img{display:block}
+.skill{width:100%;height:100%;margin:0 auto;background:url(img/skill_bg.jpg) no-repeat}
+.skill .wTitle{height:50px;line-height:50px;padding:80px 0 0 0;text-align:center;color:#000;
+    font-size:24px;font-weight:bold}
+.jobskillBg{width:1080px;height:60%;margin:0 auto;padding:10px 0 0 20px}
+.jobskillBg h3{height:50px;line-height:50px;font-size:24px;color:#333}
+.jobskillBg div{height:40px;line-height:40px;font-size:22px;color:#333}
+.jobskillBg span{display:inline-block;height:40px;color:#333;font-size:18px;cursor:default;
+    -moz-transition:all .3s;
+    -ms-transition:all .3s;
+    -o-transition:all .3s;
+    -webkit-transition:all .3s;
+    transition:all .3s}
+.jobskillBg span:hover{padding-left:80px;font-size:22px;color:#06F}
+.skill_logo{text-align:center;height:75px;margin-top:20px}
+.skill_logo li{display:inline-block;margin:0 15px;cursor:pointer;width:75px;height:75px;position:relative}
+.skill_logo li span{height:75px;display:block;border-radius:50%;box-shadow:3px 5px 10px #999;cursor:pointer}
+.skill_logo img{border-radius:50%;width:75px;height:75px;transition:all 1s ease-out;
+    cursor:pointer;position:absolute;left:0;top:0}
+.foot_contact{width:100%;height:100%;margin:0 auto;background:url(img/contact_bg.jpg) no-repeat}
+.contBox{width:900px;height:400px;margin:150px auto;background:rgba(255,255,255,0.2);
+    border:1px solid #fff;overflow:hidden}
+.contBox ul li{width:100px;height:150px;padding:40px 0 0 50px}
+.contBox ul li p{display:block;width:100px;height:20px;font-size:16px;color:#000}
+.footLeft{width:300px;height:400px;float:left}
+.footRight{width:250px;height:400px;padding:0 0 0 50px;float:right;overflow:hidden}
+.footRight li{float:right;margin-right:47px}
+.footRight li P.rliP1{width:100px;height:20px;margin-left:-50px}
+.footCenter{width:250px;height:330px;padding:70px 0 0 50px;float:left}
+.footCenter img{border-radius:50%}
