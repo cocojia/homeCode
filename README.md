@@ -4,3 +4,4 @@
 :----:|:----:
 rem布局js控制fontsize|index.js
 markdown语法说明|markdown.md
+图片无缝滚动|SeamlessScrolling.html

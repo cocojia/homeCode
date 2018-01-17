@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片无缝滚动</title>
+	<style type="text/css">
+		 *{padding:0;margin:0;}
+		.cont{position: relative;}
+		.cont h3{text-align: center;padding:20px 0;}
+		.scrollbox{width: 1200px;height:424px;overflow: hidden;margin: 0 auto;position: relative;}
+		.scrollbox ul{list-style: none;width: 8400px;height:424px; overflow: hidden;position: absolute;}
+		.scrollbox ul li{float: left;width: 599px;height: 424px;border-left:1px solid #fff;}
+		.anniu{display: block;width: 45px; height: 45px;position: absolute;z-index: 10;}
+		.leftBtn{background: url('website/img/zuoanniu.png') no-repeat;bottom: 201px;left: 0px;}
+		.rightBtn{background: url('website/img/youanniu.png') no-repeat;bottom: 201px;right: 0px;}
+	</style>
+</head>
+<body>
+	<div class="cont">
+		<h3>图片无缝滚动</h3>
+		<div class="scrollbox">
+			<ul> 
+				<li><img src="website/images/vi01.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi02.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi03.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi04.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi05.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi06.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi07.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi08.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi09.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi10.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi11.png" width="600" height="424"></li>
+	            <li><img src="website/images/vi12.png" width="600" height="424"></li>
+			</ul>
+			<a href="###" class="leftBtn anniu"></a>
+			<a href="###" class="rightBtn anniu"></a>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$('.scrollbox ul').append($('.scrollbox ul li:eq(0),.scrollbox ul li:eq(1)').clone(true));
+	var timer01 = null;
+	var linum = 0;
+	var fangxiang = 6;
+	$('.leftBtn').click(function(){
+		fangxiang = -6 ;
+	});
+	$('.rightBtn').click(function(){
+		fangxiang = 6;
+	});
+	var myTimer01 = function(){
+		linum += fangxiang ;
+		if(linum < -7200){
+			linum = 0 ;
+		}else if (linum > 0){
+			linum = -7200
+		}
+		//console.log("linum======"+linum);
+		$('.scrollbox ul').css('left',''+linum+'px');
+	}
+	timer01 = setInterval(myTimer01,30);
+	$('.scrollbox ul li').hover(function(){
+		//鼠标进入执行的方法
+		$(this).siblings().stop().fadeTo(300,0.3);
+		clearInterval(timer01);  //清除定时器
+	},function(){
+		//鼠标离开时执行的方法
+		$(this).siblings().stop().fadeTo(300,1);
+		timer01 = setInterval(myTimer01,30);  //开启定时器
+	});
+</script>
+</html>

@@ -103,7 +103,7 @@ $(function(){
 		var timerBanner = function(){
 			banNum++;
 			$('.bannerBox ul li').css({"-webkit-transform":"rotateX(" + -90*banNum +"deg)","-moz-transform":"rotateX(" + -90*banNum +"deg)","-ms-transform":"rotateX(" + -90*banNum +"deg)","-o-transform":"rotateX(" + -90*banNum +"deg)"});
-			if(banNum > 4){
+			if(banNum >3){
 				banNum = 0;
 			}
 		};
@@ -148,12 +148,12 @@ $(function(){
 		//无缝滚动轮换图效果结束
 		
 		//web作品展示  开始  //突出展示效果
-		var webThis = this;
+		//var webThis = this;
 		$('.webBox ul li').mouseover(function(e) {
 			
-            $(webThis).siblings().stop().fadeTo(300,0.5);
+            $(this).siblings().stop().fadeTo(300,0.5);
         }).mouseout(function(e) {
-            $(webThis).siblings().stop().fadeTo(300,1);
+            $(this).siblings().stop().fadeTo(300,1);
         });
 		//web作品展示  结束		
 		

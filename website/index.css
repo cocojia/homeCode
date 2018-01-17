@@ -206,7 +206,7 @@ a:hover{color:#f60;text-decoration:none}
     -o-backface-visibility:hidden;
     -webkit-backface-visibility:hidden;
     backface-visibility:hidden}
-.bannerBox ul li:nth-child(2) .mianA{background-position:-180px 0}
+.bannerBox ul li:nth-child(2) .mianA{background-position:-180px 0;}
 .bannerBox ul li:nth-child(3) .mianA{background-position:-360px 0}
 .bannerBox ul li:nth-child(4) .mianA{background-position:-540px 0}
 .bannerBox ul li:nth-child(5) .mianA{background-position:-720px 0}
