@@ -4,6 +4,7 @@
 	<title>图片无缝滚动</title>
 	<style type="text/css">
 		 *{padding:0;margin:0;}
+		 .bgcolorRed{background-color: red;}
 		.cont{position: relative;}
 		h3{text-align: center;padding:20px 0;}
 		.scrollbox{width: 1200px;height:424px;overflow: hidden;margin: 0 auto;position: relative;}
@@ -14,9 +15,9 @@
 		.rightBtn{background: url('website/img/youanniu.png') no-repeat;bottom: 201px;right: 0px;}
 
 		/* --------------------*/
-		.contText{border:1px solid black;position: relative;}
-		.plist{border:1px solid red;margin: 0 auto;position: absolute;}
-		.plist p{text-align: center;height: 36px;line-height: 36px;}
+		.contText{position: relative;height: 180px;overflow: hidden;}
+		.plist{margin: 0 auto;position: absolute;height:360px;overflow: hidden;width: 100%;}
+		.plist p{text-align: center;height: 36px;line-height: 36px;width: 300px; margin: 0 auto;}
 	</style>
 </head>
 <body>
@@ -91,6 +92,26 @@
 	});
 </script>
 <script type="text/javascript">
-	$('.plist').css('top','100px');
+	$('.plist').append($('.plist p').clone(true));
+	var timer02 = null ;
+	var step = 0;
+	var myTimer02 = function(){
+		step -= 6;
+		if(step < -180 ){
+			step = 0;
+		}
+
+		$('.plist').css('top',step+'px');
+		console.log(step);
+	}
+	timer02 = setInterval(myTimer02,200);
+	//hover事件
+	$('.plist p').hover(function(){
+		$(this).addClass('bgcolorRed');
+		clearInterval(timer02);
+	},function(){
+		$(this).removeClass('bgcolorRed');
+		timer02 = setInterval(myTimer02,200);
+	});
 </script>
 </html>
