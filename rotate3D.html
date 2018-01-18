@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片旋转切换特效-3D</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{padding: 0;margin:0;}
+		h3{text-align: center;padding: 50px 0;}
+		.imgBox{position: relative;height: 350px;width: 900px; margin: 0 auto;text-align: center;}
+		.imgBox ul{height: 350px;list-style: none;}
+		.imgBox ul li {position: absolute;width: 180px;height: 350px;
+		transform-style: preserve-3d;transition: all 1s ease 0s;}
+		.imgBox ul li span{display: block;width: 180px;height: 350px;position: absolute;}
+		.imgBox ul li .mainA{background: url(website/img/ban01.png) no-repeat ;
+		 transform: translateZ(150px);
+		 backface-visibility: hidden;}
+		.imgBox ul li .mainB{background: url(website/img/ban02.png) no-repeat;
+			transform: rotateX(90deg) translateZ(150px);
+		 backface-visibility: hidden;}
+		.imgBox ul li .mainC{background: url(website/img/ban03.png) no-repeat;
+		transform: rotateX(180deg) translateZ(150px);
+		backface-visibility: hidden;}
+		.imgBox ul li .mainD{background: url(website/img/ban04.png) no-repeat;
+		transform: rotateX(270deg) translateZ(150px);
+		 backface-visibility: hidden;}
+		.imgBox ul li.no1 {top:0; left: 0; transition: all 1s ease 0s}
+		.imgBox ul li.no2 {top:0; left: 180px; transition:all 1s ease 0.2s}
+		.imgBox ul li.no3 {top:0; left: 360px; transition:all 1s ease 0.4s}
+		.imgBox ul li.no4 {top:0; left: 540px; transition: all 1s ease 0.6s}
+		.imgBox ul li.no5 {top:0; left: 720px; transition: all 1s ease 0.8s}
+		.imgBox ul li.no2 span{background-position: -180px 0;}
+		.imgBox ul li.no3 span{background-position: -360px 0;}
+		.imgBox ul li.no4 span{background-position: -540px 0;}
+		.imgBox ul li.no5 span{background-position: -720px 0;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>图片3D切换特效</h3>
+		<div class="imgBox">
+			<ul>
+				<li class="no1">
+					<span class="mainA"></span>
+					<span class="mainB"></span>
+					<span class="mainC"></span>
+					<span class="mainD"></span>
+				</li>
+				<li class="no2">
+					<span class="mainA"></span>
+					<span class="mainB"></span>
+					<span class="mainC"></span>
+					<span class="mainD"></span>
+				</li>
+				<li class="no3">
+					<span class="mainA"></span>
+					<span class="mainB"></span>
+					<span class="mainC"></span>
+					<span class="mainD"></span>
+				</li>
+				<li class="no4">
+					<span class="mainA"></span>
+					<span class="mainB"></span>
+					<span class="mainC"></span>
+					<span class="mainD"></span>
+				</li>
+				<li class="no5">
+					<span class="mainA"></span>
+					<span class="mainB"></span>
+					<span class="mainC"></span>
+					<span class="mainD"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	var num = 0;
+	var rotate =  function(){
+		num++;
+		$('.imgBox ul li').css('transform','rotateX('+num*90+'deg)');
+		if(num > 3){
+			num = 0;
+		}
+		console.log(1);
+	}
+	setInterval(rotate,2000);
+</script>
+</html>

@@ -5,3 +5,5 @@
 rem布局js控制fontsize|index.js
 markdown语法说明|markdown.md
 图片无缝滚动|SeamlessScrolling.html
+文字向上无缝滚动|SeamlessScrolling.html
+图片3D切换特效|rotate3D.html
